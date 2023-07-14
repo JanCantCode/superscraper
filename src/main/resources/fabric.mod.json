@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "superscraper",
+  "version": "${version}",
+  "name": "superscraper",
+  "description": "hiermit wird supertier kopiert!! ahahaha",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/superscraper/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "tk.jandev.superscraper.client.SuperscraperClient"
+    ],
+    "main": [
+      "tk.jandev.superscraper.Superscraper"
+    ]
+  },
+  "mixins": [
+    "superscraper.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
