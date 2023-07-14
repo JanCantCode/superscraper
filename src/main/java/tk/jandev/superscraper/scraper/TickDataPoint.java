@@ -4,6 +4,7 @@ public class TickDataPoint {
     public double playerX;
     public double playerY;
     public double playerZ;
+    public double playerHealth;
 
     public double yaw;
     public double pitch;
@@ -12,6 +13,7 @@ public class TickDataPoint {
     public double enemyX;
     public double enemyY;
     public double enemyZ;
+    public double enemyHealth;
 
     public boolean w;
     public boolean a;
@@ -22,6 +24,6 @@ public class TickDataPoint {
     public boolean jump;
 
     public String toString() {
-        return playerX + " " + playerY + " " + playerZ + " " + yaw + " " + pitch + " " + attackTime + " " + enemyX + " " + enemyY +" " + enemyZ+" "+w+" "+a+" "+s+" "+d+" "+sprint+" "+hit+" "+jump;
+        return playerX + " " + playerY + " " + playerZ + " " + yaw + " " + pitch + " " + attackTime + " " + enemyX + " " + enemyY +" " + enemyZ+" "+w+" "+a+" "+s+" "+d+" "+sprint+" "+hit+" "+jump+" "+enemyHealth+" "+playerHealth;
     }
 }

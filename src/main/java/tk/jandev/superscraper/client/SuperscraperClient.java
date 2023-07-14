@@ -58,6 +58,7 @@ public class SuperscraperClient implements ClientModInitializer {
         dataPoint.playerX = mc.player.getX();
         dataPoint.playerY = mc.player.getY();
         dataPoint.playerZ = mc.player.getZ();
+        dataPoint.playerHealth = mc.player.getHealth();
         dataPoint.attackTime = 1.0F - mc.player.getItemCooldownManager().getCooldownProgress(Items.DIAMOND_SWORD, 0.0F);
 
         dataPoint.yaw = mc.player.getYaw();
@@ -66,6 +67,7 @@ public class SuperscraperClient implements ClientModInitializer {
         dataPoint.enemyX = enemy.getX();
         dataPoint.enemyY = enemy.getY();
         dataPoint.enemyZ = enemy.getZ();
+        dataPoint.enemyHealth = enemy.getHealth();
 
         dataPoint.w = mc.options.forwardKey.isPressed();
         dataPoint.a = mc.options.leftKey.isPressed();
