@@ -79,4 +79,21 @@ public class SuperscraperClient implements ClientModInitializer {
 
         DataPointTracker.add(dataPoint);
     }
+
+    public static PlayerEntity getNextPlayer() {
+        MinecraftClient minecraftClient = MinecraftClient.getInstance();
+        ClientPlayerEntity clientPlayer = minecraftClient.player;
+        double shortestDistance = Double.MAX_VALUE;
+        PlayerEntity nextPlayer = null;
+        for (PlayerEntity player : minecraftClient.world.getPlayers()) { 
+            if (player != clientPlayer) {
+                double distance = clientPlayer.squaredDistanceTo(player);
+                if (distance < shortestDistance) { 
+                    shortestDistance = distance;
+                    nextPlayer = player;
+                } 
+            }
+        }
+        return nextPlayer; 
+    }
 }
